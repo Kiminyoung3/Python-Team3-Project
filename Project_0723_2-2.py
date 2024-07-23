@@ -80,7 +80,7 @@ def main():
         elif get_choice == "종합재해지수":
             while True:
                 disaster = input("도수율과 강도율을 먼저 계산하시겠습니까? (네/아니오): ").strip().lower()
-                print("-" * 50)
+                print("-" * 30)
                 if disaster == "네":
                     number_of_accidents = get_input("★ 재해 발생 건수를 입력하세요.: ")
                     total_work_hours = get_input("★ 연간 근로시간을 입력하세요.: ")
