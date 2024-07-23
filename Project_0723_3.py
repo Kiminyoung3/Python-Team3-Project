@@ -1,8 +1,4 @@
 class SafetyMetricsCalculator:
-    """
-    Class to calculate safety metrics including Frequency Rate, Severity Rate,
-    Annual Accident Rate, and Comprehensive Disaster Index.
-    """
 
     def __init__(self, number_of_accidents=None, total_work_hours=None,
                  lost_work_days=None, total_workers=None, dosu=None, gangdo=None):
@@ -49,11 +45,6 @@ class SafetyMetricsCalculator:
 
 
 def get_input(prompt):
-    """
-    Get a positive integer input from the user with validation.
-    :param prompt: The prompt message to display to the user.
-    :return: A positive integer input from the user.
-    """
     while True:
         try:
             value = int(input(prompt))  # 값을 입력받음
@@ -82,7 +73,7 @@ def main():
             calculator = SafetyMetricsCalculator(number_of_accidents=number_of_accidents, total_work_hours=total_work_hours)
             frequency_rate = calculator.도수율_계산기()
 
-            print("="*10, "계산결과", "="*10)
+            print("-"*10, "계산결과", "-"*10)
             print("♥ 도수율: ", frequency_rate, "→ 100만 근로시간당", frequency_rate, "건의 재해 발생")
             print("=" * 30)
 
@@ -93,7 +84,7 @@ def main():
             calculator = SafetyMetricsCalculator(lost_work_days=lost_work_days, total_work_hours=total_work_hours)
             severity_rate = calculator.강도율_계산기()
 
-            print("="*10, "계산결과", "="*10)
+            print("-"*10, "계산결과", "-"*10)
             print("♥ 강도율: ", severity_rate, "→ 1000시간당", severity_rate, "일의 근로손실일수 발생")
             print("=" * 30)
 
@@ -104,7 +95,7 @@ def main():
             calculator = SafetyMetricsCalculator(number_of_accidents=number_of_accidents, total_workers=total_workers)
             annual_accident_rate = calculator.연천인율_계산기()
 
-            print("="*10, "계산결과", "="*10)
+            print("-"*10, "계산결과", "-"*10)
             print(f"♥ 연천인율: ", annual_accident_rate, "→ 1년에 1000명 당", annual_accident_rate, "건의 재해 발생")
             print("=" * 30)
 
@@ -123,7 +114,7 @@ def main():
                     severity_rate1 = calculator.강도율_계산기()
                     comprehensive_disaster_index1 = calculator.종합재해지수_계산기1()
 
-                    print("=" * 10, "계산결과", "=" * 10)
+                    print("-" * 10, "계산결과", "-" * 10)
                     print("♥ 도수율: ", frequency_rate1)
                     print("♥ 강도율: ", severity_rate1)
                     print("♥ 종합재해지수: ", comprehensive_disaster_index1)
@@ -136,13 +127,13 @@ def main():
 
                     calculator = SafetyMetricsCalculator(dosu=dosu, gangdo=gangdo)
                     comprehensive_disaster_index2 = calculator.종합재해지수_계산기2()
-                    print("=" * 10, "계산결과", "=" * 10)
+                    print("-" * 10, "계산결과", "-" * 10)
                     print("♥ 종합재해지수: ", comprehensive_disaster_index2)
                     print("=" * 30)
                     break
 
                 else:
-                    print("올바른 입력을 하세요. (네/아니오)")
+                    print("올바른 값을 입력하세요. (네/아니오)")
 
         else:
             print("위의 재해 지수 중 한 가지를 입력해주세요.")

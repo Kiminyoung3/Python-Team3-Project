@@ -9,23 +9,15 @@
 
 #클래스 생성
 class SafetyMetricsCalculator:
-    def __init__(self, number_of_accidents, total_work_hours, lost_work_days, total_workers, dosu, gangdo):
-        self.number_of_accidents = number_of_accidents     #요소1: 재해발생건수
-        self.total_work_hours = total_work_hours     #요소2: 근로시간
-        self.lost_work_days = lost_work_days     #요소3: 근로손실일수
-        self.total_workers = total_workers     #요소4: 근로자 수
-        self.dosu = dosu
-        self.gangdo = gangdo
-
-    def 도수율_계산기(self):
+    def 도수율_계산기(self, number_of_accidents, total_work_hours):
     # 도수율 계산하는 함수 = 재해발생건수/근로시간 * 1,000,000
         return (self.number_of_accidents / self.total_work_hours) * 1_000_000
 
-    def 강도율_계산기(self):
+    def 강도율_계산기(self, lost_work_days, total_work_hours):
     # 강도율 계산하는 함수 = 근로손실일수/근로시간 * 1,000
         return (self.lost_work_days / self.total_work_hours) * 1_000
 
-    def 연천인율_계산기(self):
+    def 연천인율_계산기(self, number_of_accidents, total_workers):
     # 연천인율 계산하는 함수 = 재해발생건수/근로자 수 * 1,000
         return (self.number_of_accidents / self.total_workers) * 1_000
 
