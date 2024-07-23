@@ -48,7 +48,7 @@ def main():
 
     while True:
         get_choice = input("계산할 재해 지수를 입력하세요. (도수율/강도율/연천인율/종합재해지수): ").strip()
-        print("-" * 50)
+        print("-" * 30)
 
         if get_choice == "도수율":
             number_of_accidents = get_input("★ 재해 발생 건수를 입력하세요.: ")
