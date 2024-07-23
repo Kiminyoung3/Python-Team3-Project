@@ -1,3 +1,6 @@
+print("=" * 50)
+print("             ~ 재해 지수 계산기입니다. ~")
+print("-도수율, 강도율, 연천인율, 종합재해지수를 계산할 수 있습니다.")
 class SafetyMetricsCalculator:
 
     def 도수율_계산기(self, number_of_accidents, total_work_hours):
@@ -37,15 +40,15 @@ def get_input(prompt):
 
 
 def main():
-    print("=" * 30)
-    print("*<Safety Metrics Calculator>*")
-    print("=" * 30)
+    print("=" * 50)
+    print("*"*10, "<Safety Metrics Calculator>", "*"*10)
+    print("=" * 50)
 
     calculator = SafetyMetricsCalculator()
 
     while True:
         get_choice = input("계산할 재해 지수를 입력하세요. (도수율/강도율/연천인율/종합재해지수): ").strip()
-        print("-" * 30)
+        print("-" * 50)
 
         if get_choice == "도수율":
             number_of_accidents = get_input("★ 재해 발생 건수를 입력하세요.: ")
@@ -54,7 +57,7 @@ def main():
             frequency_rate = calculator.도수율_계산기(number_of_accidents, total_work_hours)
             print("-" * 10, "계산결과", "-" * 10)
             print("♥ 도수율: ", frequency_rate, "→ 100만 근로시간당", frequency_rate, "건의 재해 발생")
-            print("=" * 30)
+            print("=" * 50)
 
         elif get_choice == "강도율":
             lost_work_days = get_input("★ 근로손실일수를 입력하세요.: ")
@@ -63,7 +66,7 @@ def main():
             severity_rate = calculator.강도율_계산기(lost_work_days, total_work_hours)
             print("-" * 10, "계산결과", "-" * 10)
             print("♥ 강도율: ", severity_rate, "→ 1000시간당", severity_rate, "일의 근로손실일수 발생")
-            print("=" * 30)
+            print("=" * 50)
 
         elif get_choice == "연천인율":
             number_of_accidents = get_input("★ 재해 발생 건수를 입력하세요.: ")
@@ -72,12 +75,12 @@ def main():
             annual_accident_rate = calculator.연천인율_계산기(number_of_accidents, total_workers)
             print("-" * 10, "계산결과", "-" * 10)
             print(f"♥ 연천인율: ", annual_accident_rate, "→ 1년에 1000명 당", annual_accident_rate, "건의 재해 발생")
-            print("=" * 30)
+            print("=" * 50)
 
         elif get_choice == "종합재해지수":
             while True:
                 disaster = input("도수율과 강도율을 먼저 계산하시겠습니까? (네/아니오): ").strip().lower()
-                print("-" * 30)
+                print("-" * 50)
                 if disaster == "네":
                     number_of_accidents = get_input("★ 재해 발생 건수를 입력하세요.: ")
                     total_work_hours = get_input("★ 연간 근로시간을 입력하세요.: ")
@@ -91,7 +94,7 @@ def main():
                     print("♥ 도수율: ", frequency_rate1)
                     print("♥ 강도율: ", severity_rate1)
                     print("♥ 종합재해지수: ", comprehensive_disaster_index1)
-                    print("=" * 30)
+                    print("=" * 50)
                     break
 
                 elif disaster == "아니오":
@@ -101,18 +104,18 @@ def main():
                     comprehensive_disaster_index2 = calculator.종합재해지수_계산기2(dosu, gangdo)
                     print("-" * 10, "계산결과", "-" * 10)
                     print("♥ 종합재해지수: ", comprehensive_disaster_index2)
-                    print("=" * 30)
+                    print("=" * 50)
                     break
 
                 else:
                     print("올바른 입력을 하세요. (네/아니오)")
-                    print("=" * 30)
+                    print("=" * 50)
 
         else:
             print("위의 재해 지수 중 한 가지를 입력해주세요.")
 
         repeat = input("계산을 다시 하시겠습니까? (네/아니오): ").strip().lower()
-        print("=" * 30)
+        print("=" * 50)
         if repeat != '네':
             break
 
