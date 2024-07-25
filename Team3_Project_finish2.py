@@ -57,7 +57,7 @@ def main():
 
     while True:
         get_choice = input("              ~계산할 재해 지수를 입력하세요.~ \n1. 도수율 \n2. 강도율 \n3. 연천인율 \n4. 종합재해지수 "
-                           "\n\n→ 재해 지수 선택:  ").strip()
+                           "\n\n→ 재해 지수 선택: ").strip()
 
         if get_choice == "도수율":
             number_of_accidents = get_input("\n★ 재해 발생 건수를 입력하세요.: ")
@@ -70,11 +70,11 @@ def main():
                 '결과값': frequency_rate
             })
 
-            print("." * 30)
-            print("-" * 10, "계산결과", "-" * 10)
-            print("." * 30)
+            print("." * 60)
+            print("               ", "-" * 10, "계산결과", "-" * 10)
+            print("." * 60)
             print("♥ 도수율: ", frequency_rate, "→ 100만 근로시간당", frequency_rate, "건의 재해 발생")
-            print("=" * 50)
+            print("=" * 60)
 
         elif get_choice == "강도율":
             lost_work_days = get_input("★ 근로손실일수를 입력하세요.: ")
@@ -87,9 +87,9 @@ def main():
                 '결과값': severity_rate
             })
 
-            print("." * 30)
-            print("-" * 10, "계산결과", "-" * 10)
-            print("." * 30)
+            print("." * 60)
+            print("               ", "-" * 10, "계산결과", "-" * 10)
+            print("." * 60)
             print("♥ 강도율: ", severity_rate, "→ 1000시간당", severity_rate, "일의 근로손실일수 발생")
             print("=" * 60)
 
@@ -104,9 +104,9 @@ def main():
                 '결과값': annual_accident_rate
             })
 
-            print("." * 30)
-            print("-" * 10, "계산결과", "-" * 10)
-            print("." * 30)
+            print("." * 60)
+            print("               ", "-" * 10, "계산결과", "-" * 10)
+            print("." * 60)
             print(f"♥ 연천인율: ", annual_accident_rate, "→ 1년에 1000명 당", annual_accident_rate, "건의 재해 발생")
             print("=" * 60)
 
@@ -129,9 +129,9 @@ def main():
                         '결과값': comprehensive_disaster_index1
                     })
 
-                    print("." * 30)
-                    print("-" * 10, "계산결과", "-" * 10)
-                    print("." * 30)
+                    print("." * 60)
+                    print("               ", "-" * 10, "계산결과", "-" * 10)
+                    print("." * 60)
                     print("♥ 도수율: ", frequency_rate1)
                     print("♥ 강도율: ", severity_rate1)
                     print("♥ 종합재해지수: ", comprehensive_disaster_index1)
@@ -151,9 +151,9 @@ def main():
                         '결과값': comprehensive_disaster_index2
                     })
 
-                    print("." * 30)
-                    print("-" * 10, "계산결과", "-" * 10)
-                    print("." * 30)
+                    print("." * 60)
+                    print("               ", "-" * 10, "계산결과", "-" * 10)
+                    print("." * 60)
                     print("♥ 종합재해지수: ", comprehensive_disaster_index2)
                     print("=" * 0)
 
