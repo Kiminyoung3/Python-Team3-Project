@@ -56,10 +56,11 @@ def main():
     results = []
 
     while True:
-        get_choice = input("계산할 재해 지수를 입력하세요. (도수율/강도율/연천인율/종합재해지수): ").strip()
+        get_choice = input("              ~계산할 재해 지수를 입력하세요.~ \n1. 도수율 \n2. 강도율 \n3. 연천인율 \n4. 종합재해지수 "
+                           "\n\n→ 재해 지수 선택:  ").strip()
 
         if get_choice == "도수율":
-            number_of_accidents = get_input("★ 재해 발생 건수를 입력하세요.: ")
+            number_of_accidents = get_input("\n★ 재해 발생 건수를 입력하세요.: ")
             total_work_hours = get_input("★ 연간 근로시간을 입력하세요.: ")
 
             frequency_rate = calculator.도수율_계산기(number_of_accidents, total_work_hours)
@@ -131,8 +132,8 @@ def main():
                     print("." * 30)
                     print("-" * 10, "계산결과", "-" * 10)
                     print("." * 30)
-                    print("♥ 도수율: ", frequency_rate1, "→ 100만 근로시간당", frequency_rate, "건의 재해 발생")
-                    print("♥ 강도율: ", severity_rate1, "→ 1000시간당", severity_rate, "일의 근로손실일수 발생")
+                    print("♥ 도수율: ", frequency_rate1)
+                    print("♥ 강도율: ", severity_rate1)
                     print("♥ 종합재해지수: ", comprehensive_disaster_index1)
                     print("=" * 60)
 
@@ -154,7 +155,7 @@ def main():
                     print("-" * 10, "계산결과", "-" * 10)
                     print("." * 30)
                     print("♥ 종합재해지수: ", comprehensive_disaster_index2)
-                    print("=" * 60)
+                    print("=" * 0)
 
                     break
 
